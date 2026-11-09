@@ -25,10 +25,12 @@ class App {
     }
 
     toggleCarrito() {
-        document.getElementById("cart-panel").classList.toggle("open");
+        const panel = document.getElementById("cart-panel");
+        if (panel) {
+            panel.classList.toggle("open");
+        }
     }
 
-    // RF02: checkout con resumen
     checkout() {
         if (this.carrito.items.length === 0) {
             alert("Tu carrito está vacío");

@@ -1,10 +1,13 @@
-// carrito.js - Gestión del carrito y checkout
+// carrito.js - Gestión del carrito de compras
 class ItemCarrito {
     constructor(producto, cantidad = 1) {
         this.producto = producto;
         this.cantidad = cantidad;
     }
-    get subtotal() { return this.producto.precio * this.cantidad; }
+    
+    get subtotal() {
+        return this.producto.precio * this.cantidad;
+    }
 }
 
 class Carrito {
@@ -13,7 +16,6 @@ class Carrito {
         this.idCarrito = Date.now();
     }
 
-    // RF02: agregar productos
     agregarProducto(producto, cantidad = 1) {
         const existente = this.items.find(i => i.producto.id === producto.id);
         if (existente) {
@@ -23,12 +25,14 @@ class Carrito {
         }
     }
 
-    // RF02: modificar cantidades
     modificarCantidad(idProducto, nuevaCantidad) {
         const item = this.items.find(i => i.producto.id === idProducto);
         if (item) {
-            if (nuevaCantidad <= 0) this.eliminarProducto(idProducto);
-            else item.cantidad = nuevaCantidad;
+            if (nuevaCantidad <= 0) {
+                this.eliminarProducto(idProducto);
+            } else {
+                item.cantidad = nuevaCantidad;
+            }
         }
     }
 
@@ -40,7 +44,6 @@ class Carrito {
         return this.items.reduce((acc, i) => acc + i.subtotal, 0);
     }
 
-    // RF02: generar resumen con ID único
     generarResumenPedido() {
         const idPedido = "PED-" + Date.now();
         const resumen = {
@@ -53,19 +56,22 @@ class Carrito {
             })),
             total: this.calcularTotal()
         };
-        this.items = []; // vaciar carrito tras checkout
+        this.items = [];
         return resumen;
     }
 
     renderizar() {
         const cont = document.getElementById("cart-items");
         if (!cont) return;
+        
         cont.innerHTML = "";
+        
         if (this.items.length === 0) {
-            cont.innerHTML = "<p>Tu carrito está vacío 🧦</p>";
+            cont.innerHTML = "<p style='padding: 1rem; text-align: center;'>Tu carrito está vacío 🧦</p>";
             document.getElementById("cart-total").textContent = "Total: $0";
             return;
         }
+
         this.items.forEach(item => {
             const div = document.createElement("div");
             div.className = "cart-item";
@@ -75,12 +81,14 @@ class Carrito {
                     <small>$${item.producto.precio} x ${item.cantidad}</small>
                 </div>
                 <div>
-                    <button onclick="app.carrito.modificarCantidad(${item.producto.id}, ${item.cantidad - 1}); app.renderCarrito()">-</button>
-                    <button onclick="app.carrito.modificarCantidad(${item.producto.id}, ${item.cantidad + 1}); app.renderCarrito()">+</button>
-                    <button onclick="app.carrito.eliminarProducto(${item.producto.id}); app.renderCarrito()">🗑</button>
-                </div>`;
+                    <button onclick="app.carrito.modificarCantidad(${item.producto.id}, ${item.cantidad - 1}); app.renderCarrito()" style="padding: 2px 8px; margin: 2px;">-</button>
+                    <button onclick="app.carrito.modificarCantidad(${item.producto.id}, ${item.cantidad + 1}); app.renderCarrito()" style="padding: 2px 8px; margin: 2px;">+</button>
+                    <button onclick="app.carrito.eliminarProducto(${item.producto.id}); app.renderCarrito()" style="padding: 2px 8px; margin: 2px;">🗑</button>
+                </div>
+            `;
             cont.appendChild(div);
         });
+        
         document.getElementById("cart-total").textContent = `Total: $${this.calcularTotal()}`;
     }
 }

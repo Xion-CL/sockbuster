@@ -1,6 +1,6 @@
-// catalogo.js - Datos del catálogo y lógica de renderizado
+// catalogo.js - Catálogo inicial y controlador
 
-// Catálogo inicial con imágenes reales
+// Catálogo inicial con imágenes de Unsplash (públicas y sin CORS)
 const CATALOGO_INICIAL = [
     new Producto(1, "Calcetín Stranger Things", "Diseño inspirado en el Upside Down - Hellfire Club", 5990, 15, ["S", "M", "L"], "https://images.unsplash.com/photo-1560769629-9fa4f4a6b38d?w=400&h=300&fit=crop", "Terror80s", "Stranger Things"),
     new Producto(2, "Calcetín Star Wars", "Logo rebelde con R2-D2 y C-3PO", 6490, 20, ["M", "L", "XL"], "https://images.unsplash.com/photo-1611672511754-61d641049a71?w=400&h=300&fit=crop", "CienciaFiccion", "Star Wars"),
@@ -19,7 +19,6 @@ class Catalogo {
         this.filtroActual = "Todos";
     }
 
-    // RF01: filtrar por categoría
     filtrarPorCategoria(categoria) {
         this.filtroActual = categoria;
         if (categoria === "Todos") return this.productos;
@@ -30,6 +29,7 @@ class Catalogo {
         const categorias = ["Todos", "CienciaFiccion", "Terror80s", "SeriesDrama", "Animacion"];
         const cont = document.getElementById("filtros");
         if (!cont) return;
+        
         cont.innerHTML = "";
         categorias.forEach(cat => {
             const btn = document.createElement("button");
@@ -47,13 +47,20 @@ class Catalogo {
     renderizarProductos() {
         const cont = document.getElementById("productos-grid");
         if (!cont) return;
+        
         cont.innerHTML = "";
         const lista = this.filtrarPorCategoria(this.filtroActual);
+        
+        if (lista.length === 0) {
+            cont.innerHTML = "<p style='text-align: center; padding: 2rem; color: #666;'>No hay productos disponibles en esta categoría</p>";
+            return;
+        }
+        
         lista.forEach(p => {
             const card = document.createElement("div");
             card.className = "card";
             card.innerHTML = `
-                <img src="${p.imagenURL}" alt="${p.nombre}" onerror="this.src='https://via.placeholder.com/300x200?text=Sockbuster'">
+                <img src="${p.imagenURL}" alt="${p.nombre}" onerror="this.src='https://via.placeholder.com/400x300?text=Sockbuster'">
                 <div class="card-body">
                     <h3>${p.nombre}</h3>
                     <p>${p.descripcion}</p>
@@ -61,11 +68,11 @@ class Catalogo {
                     <p class="price">$${p.precio}</p>
                     <p>Stock: ${p.stock} | Tallas: ${p.tallas.join(", ")}</p>
                     <span class="badge">${p.categoria}</span><br><br>
-                    <button class="btn" ${!p.disponible() ? 'disabled' : ''}
-                        onclick="app.agregarAlCarrito(${p.id})">
+                    <button class="btn" ${!p.disponible() ? 'disabled' : ''} onclick="app.agregarAlCarrito(${p.id})">
                         ${p.disponible() ? 'Agregar al carrito' : 'Sin stock'}
                     </button>
-                </div>`;
+                </div>
+            `;
             cont.appendChild(card);
         });
     }
