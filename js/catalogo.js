@@ -66,7 +66,7 @@ class Catalogo {
     }
 }
 
-// RF01: Catálogo por colecciones temáticas con TUS imágenes exactas
+// RF01: Catálogo por colecciones temáticas con TUS imágenes exactas (URLs limpias sin espacios)
 const CATALOGO_INICIAL = [
     new Producto(1, "Calcetín Stranger Things", "Diseño inspirado en el Upside Down - Hellfire Club", 5990, 15, ["S", "M", "L"], "https://i5.walmartimages.cl/asr/ff1f3f14-6922-430e-9347-03a50e8bb18c.0612af126845392fd8e4c05a8a7765a8.jpeg?odnHeight=2000&odnWidth=2000&odnBg=ffffff", "Terror80s", "Stranger Things"),
     new Producto(2, "Calcetín Star Wars", "Logo rebelde con R2-D2 y C-3PO", 6490, 20, ["M", "L", "XL"], "https://home.ripley.cl/store/Attachment/WOP/D163/2000388286964/2000388286964_2.jpg", "CienciaFiccion", "Star Wars"),
