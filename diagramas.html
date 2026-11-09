@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Arquitectura UML 4+1 - Sockbuster</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>📐 Arquitectura UML - Paradigma 4+1</h1>
+        <p>Documentación técnica organizada por vistas</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="diagramas.html">Arquitectura UML</a>
+    </nav>
+
+    <main>
+        <!-- 3.a VISTA LÓGICA -->
+        <section class="diagram-section">
+            <h2>3.a Vista Lógica</h2>
+            <p>Diagrama de Clases que representa la estructura del dominio: entidades Producto, Usuario, Pedido, Carrito, Reseña, Colección y sus relaciones.</p>
+            <a href="https://i.imgur.com/UnIv3Th.png" target="_blank">
+                <img src="https://i.imgur.com/UnIv3Th.png" alt="Vista Lógica">
+            </a>
+            <p><strong>Requerimientos que valida:</strong> RF01, RF02, RF03, RF04, RNF02</p>
+        </section>
+
+        <!-- 3.b VISTA DE DESARROLLO -->
+        <section class="diagram-section">
+            <h2>3.b Vista de Desarrollo (Implementación)</h2>
+            <p>Diagrama de Componentes que muestra la organización del código: frontend (HTML/JS POO), backend (API REST) y persistencia (MySQL).</p>
+            <a href="https://i.imgur.com/7ETp3lM.png" target="_blank">
+                <img src="https://i.imgur.com/7ETp3lM.png" alt="Vista de Desarrollo">
+            </a>
+            <p><strong>Requerimientos que valida:</strong> RF01-RF04, RNF01, RNF02</p>
+        </section>
+
+        <!-- 3.c VISTA DE PROCESOS -->
+        <section class="diagram-section">
+            <h2>3.c Vista de Procesos</h2>
+            <p>Diagramas de Secuencia que reflejan la concurrencia, flujo de datos e interacciones de los procesos clave: Checkout (RF02) y Filtrado de catálogo (RF01).</p>
+            <a href="https://i.imgur.com/zhOOqiK.png" target="_blank">
+                <img src="https://i.imgur.com/zhOOqiK.png" alt="Vista de Procesos">
+            <a href="https://i.imgur.com/w9ZemmD.png" target="_blank">
+                <img src="https://i.imgur.com/w9ZemmD.png" alt="Vista de Procesos">
+            </a>
+            <p><strong>Requerimientos que valida:</strong> RF01, RF02, RNF02</p>
+        </section>
+        
+
+        <!-- 3.d VISTA FÍSICA -->
+        <section class="diagram-section">
+            <h2>3.d Vista Física (Despliegue)</h2>
+            <p>Diagrama de Despliegue que modela la topología de red: cliente, GitHub Pages (hosting), servidor backend HTTPS, MySQL (puerto 3307) y CDN Imgur.</p>
+            <a href="https://i.imgur.com/BwCw7Oj.png" target="_blank">
+                <img src="https://i.imgur.com/BwCw7Oj.png" alt="Vista Física">
+            </a>
+            <p><strong>Requerimientos que valida:</strong> RNF01, RNF02</p>
+        </section>
+
+        <!-- 3.e ESCENARIOS (5ta VISTA) -->
+        <section class="diagram-section">
+            <h2>3.e Escenarios (5ta Vista - Casos de Uso)</h2>
+            <p>Diagrama de Casos de Uso que articula y valida las 4 vistas anteriores, mostrando actores (Cliente, Administrador) y sus interacciones con el sistema.</p>
+            <a href="https://i.imgur.com/zCpbn03.png" target="_blank">
+                <img src="https://i.imgur.com/zCpbn03.png" alt="Escenarios">
+            </a>
+            <p><strong>Requerimientos que valida:</strong> Todos los RF y RNF</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sockbuster Video & Socks - Paradigma 4+1 Vistas UML</p>
+    </footer>
+</body>
+</html>
