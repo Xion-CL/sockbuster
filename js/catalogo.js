@@ -1,17 +1,5 @@
 // catalogo.js - Catálogo inicial y controlador
 
-// Catálogo inicial con imágenes de Unsplash (públicas y sin CORS)
-const CATALOGO_INICIAL = [
-    new Producto(1, "Calcetín Stranger Things", "Diseño inspirado en el Upside Down - Hellfire Club", 5990, 15, ["S", "M", "L"], "https://images.unsplash.com/photo-1560769629-9fa4f4a6b38d?w=400&h=300&fit=crop", "Terror80s", "Stranger Things"),
-    new Producto(2, "Calcetín Star Wars", "Logo rebelde con R2-D2 y C-3PO", 6490, 20, ["M", "L", "XL"], "https://images.unsplash.com/photo-1611672511754-61d641049a71?w=400&h=300&fit=crop", "CienciaFiccion", "Star Wars"),
-    new Producto(3, "Calcetín Breaking Bad", "Fórmula Heisenberg - Diseño amarillo", 6990, 10, ["S", "M", "L"], "https://images.unsplash.com/photo-1535025639604-9a804c092faa?w=400&h=300&fit=crop", "SeriesDrama", "Breaking Bad"),
-    new Producto(4, "Calcetín Studio Ghibli", "Totoro bordado - Mi Vecino Totoro", 7490, 8, ["M", "L"], "https://images.unsplash.com/photo-1581853000499-279fd7d8f8d4?w=400&h=300&fit=crop", "Animacion", "Mi Vecino Totoro"),
-    new Producto(5, "Calcetín IT Pennywise", "Globo rojo terrorífico - Pennywise", 5990, 12, ["S", "M", "L", "XL"], "https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=400&h=300&fit=crop", "Terror80s", "IT"),
-    new Producto(6, "Calcetín Matrix", "Código verde digital - Digital Rain", 6490, 18, ["M", "L"], "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop", "CienciaFiccion", "Matrix"),
-    new Producto(7, "Calcetín Game of Thrones", "Stark direwolf - Casa Lannister", 7990, 6, ["S", "M", "L"], "https://images.unsplash.com/photo-1534447677731-be2aa4d2a64b?w=400&h=300&fit=crop", "SeriesDrama", "Game of Thrones"),
-    new Producto(8, "Calcetín Dragon Ball Z", "Goku Super Saiyan - Naranja", 6990, 25, ["S", "M", "L", "XL"], "https://images.unsplash.com/photo-1568213816046-0ee1dc454645?w=400&h=300&fit=crop", "Animacion", "Dragon Ball Z")
-];
-
 // Clase Catalogo - Controlador de filtros y renderizado
 class Catalogo {
     constructor(productos) {
@@ -77,3 +65,15 @@ class Catalogo {
         });
     }
 }
+
+// RF01: Catálogo por colecciones temáticas - Imágenes de Unsplash (públicas y sin CORS)
+const CATALOGO_INICIAL = [
+    new Producto(1, "Calcetín Stranger Things", "Diseño inspirado en el Upside Down - Hellfire Club", 5990, 15, ["S", "M", "L"], "https://images.unsplash.com/photo-1560769629-9fa4f4a6b38d?w=400&h=300&fit=crop", "Terror80s", "Stranger Things"),
+    new Producto(2, "Calcetín Star Wars", "Logo rebelde con R2-D2 y C-3PO", 6490, 20, ["M", "L", "XL"], "https://images.unsplash.com/photo-1611672511754-61d641049a71?w=400&h=300&fit=crop", "CienciaFiccion", "Star Wars"),
+    new Producto(3, "Calcetín Breaking Bad", "Fórmula Heisenberg - Diseño amarillo", 6990, 10, ["S", "M", "L"], "https://images.unsplash.com/photo-1535025639604-9a804c092faa?w=400&h=300&fit=crop", "SeriesDrama", "Breaking Bad"),
+    new Producto(4, "Calcetín Studio Ghibli", "Totoro bordado - Mi Vecino Totoro", 7490, 8, ["M", "L"], "https://images.unsplash.com/photo-1581853000499-279fd7d8f8d4?w=400&h=300&fit=crop", "Animacion", "Mi Vecino Totoro"),
+    new Producto(5, "Calcetín IT Pennywise", "Globo rojo terrorífico - Pennywise", 5990, 12, ["S", "M", "L", "XL"], "https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=400&h=300&fit=crop", "Terror80s", "IT"),
+    new Producto(6, "Calcetín Matrix", "Código verde digital - Digital Rain", 6490, 18, ["M", "L"], "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop", "CienciaFiccion", "Matrix"),
+    new Producto(7, "Calcetín Game of Thrones", "Stark direwolf - Casa Lannister", 7990, 6, ["S", "M", "L"], "https://images.unsplash.com/photo-1534447677731-be2aa4d2a64b?w=400&h=300&fit=crop", "SeriesDrama", "Game of Thrones"),
+    new Producto(8, "Calcetín Dragon Ball Z", "Goku Super Saiyan - Naranja", 6990, 25, ["S", "M", "L", "XL"], "https://images.unsplash.com/photo-1568213816046-0ee1dc454645?w=400&h=300&fit=crop", "Animacion", "Dragon Ball Z")
+];
