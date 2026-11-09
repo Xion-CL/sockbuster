@@ -1,10 +1,11 @@
+<<<<<<< HEAD
 # 🧦 Sockbuster Video & Socks
 
 **Evaluación Sumativa 03 - Modelamiento de Soluciones Informáticas (TI3025)**
 
 ## 🌐 Sitio Web Desplegado
 
-🔗 **Enlace al sitio publicado:** [REEMPLAZAR_CON_URL_GITHUB_PAGES](https://tu-usuario.github.io/sockbuster/)
+🔗 **Enlace al sitio publicado:** (https://xion-cl.github.io/sockbuster/)
 
 ## 👨‍🎓 Autor
 
@@ -59,3 +60,6 @@ sockbuster/
 │ ├── catalogo.js
 │ └── app.js
 └── README.md
+=======
+# sockbuster
+>>>>>>> 573d600bcd17c580ecfe87fa7a1ce0988d85c227
