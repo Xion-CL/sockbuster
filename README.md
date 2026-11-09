@@ -5,7 +5,7 @@
 
 ## 🌐 Sitio Web Desplegado
 
-🔗 **Enlace al sitio publicado:** (http s://xion-cl.github.io/sockbuster/)
+🔗 **Enlace al sitio publicado:**["ENLACE"](http s://xion-cl.github.io/sockbuster/)
 
 ## 👨‍🎓 Autor
 
