@@ -66,7 +66,7 @@ class Catalogo {
     }
 }
 
-// RF01: Catálogo por colecciones temáticas - URLs SIN ESPACIOS
+// RF01: Catálogo por colecciones temáticas - URLs LIMPIAS SIN ESPACIOS
 const CATALOGO_INICIAL = [
     new Producto(1, "Calcetín Stranger Things", "Diseño inspirado en el Upside Down - Hellfire Club", 5990, 15, ["S", "M", "L"], "https://images.unsplash.com/photo-1560769629-9fa4f4a6b38d?w=400&h=300&fit=crop", "Terror80s", "Stranger Things"),
     new Producto(2, "Calcetín Star Wars", "Logo rebelde con R2-D2 y C-3PO", 6490, 20, ["M", "L", "XL"], "https://images.unsplash.com/photo-1611672511754-61d641049a71?w=400&h=300&fit=crop", "CienciaFiccion", "Star Wars"),
