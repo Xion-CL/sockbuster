@@ -5,11 +5,11 @@
 
 ## 🌐 Sitio Web Desplegado
 
-🔗 **Enlace al sitio publicado:** (https://xion-cl.github.io/sockbuster/)
+🔗 **Enlace al sitio publicado:** (http s://xion-cl.github.io/sockbuster/)
 
 ## 👨‍🎓 Autor
 
-- **Nombre:** Luis Tihuel [TUS APELLIDOS]
+- **Nombre:** Luis Alexander Tihuel Triviño
 - **Sede:** Punta Arenas
 - **Carrera:** Ingeniería en Informática
 - **Fecha:** Noviembre 2026
