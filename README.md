@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 # 🧦 Sockbuster Video & Socks
 
 **Evaluación Sumativa 03 - Modelamiento de Soluciones Informáticas (TI3025)**
 
 ## 🌐 Sitio Web Desplegado
 
-🔗 **Enlace al sitio publicado:**["ENLACE"](http s://xion-cl.github.io/sockbuster/)
+🔗 **Enlace al sitio publicado:** [https://xion-cl.github.io/sockbuster/](https://xion-cl.github.io/sockbuster/)
 
 ## 👨‍🎓 Autor
 
@@ -49,17 +48,17 @@ Prototipo web funcional de la plataforma de comercio electrónico **Sockbuster**
 - Imgur (imágenes)
 
 ## 📁 Estructura del Proyecto
+
+```text
 sockbuster/
 ├── index.html
 ├── catalogo.html
 ├── diagramas.html
-├── css/styles.css
+├── css/
+│   └── styles.css
 ├── js/
-│ ├── producto.js
-│ ├── carrito.js
-│ ├── catalogo.js
-│ └── app.js
+│   ├── producto.js
+│   ├── carrito.js
+│   ├── catalogo.js
+│   └── app.js
 └── README.md
-=======
-# sockbuster
->>>>>>> 573d600bcd17c580ecfe87fa7a1ce0988d85c227
